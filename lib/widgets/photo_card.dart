@@ -1,8 +1,8 @@
 import 'dart:ui';
-import 'package:cached_network_image/cached_network_image.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_tinder_demo/model/tinder_user.dart';
-import 'package:flutter_tinder_demo/widgets/photo_load_failed.dart';
+
+import '../model/tinder_user.dart';
 import '../utils/constants.dart';
 
 class PhotoCardWidget extends StatelessWidget {
@@ -32,17 +32,10 @@ class PhotoCardWidget extends StatelessWidget {
           child: Stack(
             fit: StackFit.expand,
             children: [
-              CachedNetworkImage(
-                  fit: BoxFit.cover,
-                  placeholder: (_, __) {
-                    return Container(
-                      color: Colors.redAccent,
-                    );
-                  },
-                  errorWidget: (context, _, __) {
-                    return const PhotoLoadFailed();
-                  },
-                  imageUrl: user.photoUrl),
+              Image.asset(
+                user.photoUrl,
+                fit: BoxFit.cover,
+              ),
               Positioned(
                 left: 0.0,
                 right: 0.0,

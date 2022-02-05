@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tinder_demo/model/tinder_user.dart';
 import 'package:provider/provider.dart';
 
+import '../model/tinder_user.dart';
 import '../utils/card_provider.dart';
 import '../widgets/tinder_card.dart';
 
@@ -40,21 +40,6 @@ class _TinderCardListState extends State<TinderCardList> {
             isFront: user == users.first,
           );
         }).reversed.toList(),
-        // children: List.generate(colors.length, (index) {
-        //   final color = colors[index];
-        //   return colors.last == color
-        //       ? TinderCard(
-        //           color: color,
-        //           depth: index,
-        //           constraints: constraints,
-        //         )
-        //       : PhotoCard(
-        //           color: color,
-        //           depth: index,
-        //           width: constraints.maxWidth * cardWidthPercent,
-        //           height: constraints.maxHeight * cardHeightPecent,
-        //         );
-        // }),
       );
     });
   }

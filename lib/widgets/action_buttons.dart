@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_tinder_demo/utils/card_provider.dart';
 import 'package:provider/provider.dart';
 
+import '../utils/card_provider.dart';
 import '../utils/constants.dart';
-import './circle_button.dart';
+import 'circle_button.dart';
 
 class ActionButtonsWidget extends StatelessWidget {
   final VoidCallback onDisLike;

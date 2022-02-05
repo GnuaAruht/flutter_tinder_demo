@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tinder_demo/model/tinder_user.dart';
 
+import '../model/tinder_user.dart';
 import '../utils/constants.dart';
 import '../widgets/widgets.dart';
 

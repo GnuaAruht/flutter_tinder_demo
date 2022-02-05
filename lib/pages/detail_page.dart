@@ -1,10 +1,8 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_tinder_demo/model/tinder_user.dart';
-import 'package:flutter_tinder_demo/utils/card_provider.dart';
-import 'package:flutter_tinder_demo/widgets/photo_load_failed.dart';
 import 'package:provider/provider.dart';
 
+import '../model/tinder_user.dart';
+import '../utils/card_provider.dart';
 import '../utils/constants.dart';
 import '../widgets/widgets.dart';
 
@@ -28,18 +26,8 @@ class DetailPage extends StatelessWidget {
               borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(defaultBorderRadius),
                   bottomRight: Radius.circular(defaultBorderRadius)),
-              child: CachedNetworkImage(
-                  fit: BoxFit.cover,
-                  width: MediaQuery.of(context).size.width,
-                  placeholder: (_, __) {
-                    return Container(
-                      color: Colors.redAccent,
-                    );
-                  },
-                  errorWidget: (context, _, __) {
-                    return const PhotoLoadFailed();
-                  },
-                  imageUrl: user.photoUrl),
+              child: Image.asset(user.photoUrl,
+                  fit: BoxFit.cover, width: MediaQuery.of(context).size.width),
             ),
           ),
           Expanded(

@@ -1,14 +1,14 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_tinder_demo/model/tinder_user.dart';
-import 'package:flutter_tinder_demo/pages/detail_page.dart';
-import 'package:flutter_tinder_demo/utils/fade_page_route.dart';
 import 'package:provider/provider.dart';
 
-import '../widgets/photo_card.dart';
+import '../model/tinder_user.dart';
+import '../pages/detail_page.dart';
 import '../utils/card_provider.dart';
 import '../utils/constants.dart';
+import '../utils/fade_page_route.dart';
+import '../widgets/photo_card.dart';
 
 class FrontCardWidget extends StatelessWidget {
   final TinderUser user;
